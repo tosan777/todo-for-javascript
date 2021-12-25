@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./index.js" defer></script>
+</head>
+<body>
+    <div class="input-area">
+        <input type="text" id="add-text" class="input" placeholder="TODOを入力">
+        <button class="button" id="add-button">追加</button>
+    </div>
+    <div class="incomplete-area">
+        <p class="title">未完了のTODO</p>
+        <ul>
+            <li class="list-row">
+                <p class="list-row-ttl">TODOです</p>
+                <button class="button">完了</button>
+                <button class="button">削除</button>
+            </li>
+        </ul>
+    </div>
+    <div class="complete-area">
+        <p class="title">完了したTODO</p>
+        <ul>
+            <li class="list-row">
+                <p class="list-row-ttl">TODOでした</p>
+                <button class="button">戻す</button>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
