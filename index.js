@@ -5,6 +5,36 @@ const onClickAdd = () => {
   const inputText = document.getElementById("add-text").value;
   /* add-textの値を空にして次入力しやすいようにする */
   document.getElementById("add-text").value = "";
+
+  /* liタグの生成 */
+  const li = document.createElement("li");
+  /* liタグにクラス名を追加 */
+  li.className = "list-row";
+
+  const p = document.createElement("p");
+  p.className = "list-row-ttl";
+  /* list-row-ttlにadd-textの値を代入 */
+  p.innerText = inputText;
+
+  /* 完了ボタンの生成 */
+  const completeButton = document.createElement("button");
+  completeButton.innerText = "完了";
+  completeButton.className = "button";
+
+  /* 削除ボタンの生成 */
+  const deleteButton = document.createElement("button");
+  deleteButton.innerText = "削除";
+  deleteButton.className = "button";
+
+  /* list-rowの子要素に各要素を設定 */
+  li.appendChild(p);
+  li.appendChild(completeButton);
+  li.appendChild(deleteButton);
+
+  /* incomplete-listに未完了のリストを追加 */
+  const ul = document.getElementById("incomplete-list");
+  ul.appendChild(li);
+  console.log(ul);
 };
 /* add-buttonをクリックした時のイベント */
 document.getElementById("add-button").addEventListener("click", onClickAdd);
